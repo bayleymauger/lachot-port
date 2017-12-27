@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,500,600');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

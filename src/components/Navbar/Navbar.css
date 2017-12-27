@@ -1,0 +1,175 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 73px;
+  align-items: center;
+  margin-top: 62px;
+  color: #3b3b3b;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+#logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+}
+
+nav ul li {
+  margin-left: 35px;
+  font-weight: 600;
+}
+
+nav ul li a {
+  height: inherit;
+  color: #3b3b3b;
+  font-size: 18px;
+  position: relative;
+  display: block;
+}
+
+nav ul li.active a {
+  color: #fff;
+}
+
+li:not(.active) .hover-fill-color, .code-by .hover-fill-color, .email .hover-fill-color {
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+li:not(.active) .hover-fill-color .link-layer, .code-by .hover-fill-color .link-layer, .email .hover-fill-color .link-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: inherit;
+  overflow: hidden;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-animation: anim-out-layer .3s ease-out;
+  animation: anim-out-layer .3s ease-out;
+}
+
+li:not(.active) .hover-fill-color .link-layer, li:not(.active) .hover-fill-color .link-layer:before, .code-by .hover-fill-color .link-layer, .code-by .hover-fill-color .link-layer:before, .email .hover-fill-color .link-layer, .email .hover-fill-color .link-layer:before {
+  width: 100%;
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+li:not(.active) .hover-fill-color .link-layer:before, .code-by .hover-fill-color .link-layer:before, .email .hover-fill-color .link-layer:before {
+  content: attr(data-text);
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  color: #fff;
+  -webkit-animation: anim-out-text .3s ease-out;
+  animation: anim-out-text .3s ease-out;
+}
+
+li:not(.active) .hover-fill-color:hover .link-layer, .code-by .hover-fill-color:hover .link-layer, .email .hover-fill-color:hover .link-layer {
+  -webkit-animation: anim-in-layer .3s ease forwards;
+  animation: anim-in-layer .3s ease forwards;
+}
+
+li:not(.active) .hover-fill-color:hover .link-layer:before, .code-by .hover-fill-color:hover .link-layer:before, .email .hover-fill-color:hover .link-layer:before {
+  -webkit-animation: anim-in-text .3s ease forwards;
+  animation: anim-in-text .3s ease forwards;
+}
+
+@-webkit-keyframes anim-in-text {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translateZ(0);
+  }
+}
+
+@keyframes anim-in-text {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translateZ(0);
+  }
+}
+
+@-webkit-keyframes anim-in-layer {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes anim-in-layer {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@-webkit-keyframes anim-out-text {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes anim-out-text {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@-webkit-keyframes anim-out-layer {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes anim-out-layer {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
