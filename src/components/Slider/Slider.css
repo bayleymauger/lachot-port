@@ -1,9 +1,7 @@
-.slider {
-  height: 60vh;
-  margin-top: 45px;
-  width: 24%;
-  align-self: center;
-  background: url('https://images.unsplash.com/photo-1465414829459-d228b58caf6e?auto=format&fit=crop&w=1653&q=80');
-  background-position: center;
-  background-size: cover;
+img {
+  width: 100px;
+}
+
+.slick-dots li button {
+  background: white;
 }
