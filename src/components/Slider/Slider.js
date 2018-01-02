@@ -15,13 +15,13 @@ class SimpleSlider extends Component {
       <div className="slider">
         <Slider {...settings}>
           <div><img src="https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?auto=format&fit=crop&w=1650&q=80" /></div>
-          <div><h3>2</h3></div>
-          <div><h3>3</h3></div>
-          <div><h3>4</h3></div>
-          <div><h3>5</h3></div>
-          <div><h3>6</h3></div>
+          <div><img src="" /></div>
+          <div><img src="" /></div>
+          <div><img src="" /></div>
+          <div><img src="" /></div>
+          <div><img src="" /></div>
         </Slider>
-      </div>      
+      </div>
     );
   }
 }
