@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Slider from 'react-slick';
 import './Slider.css';
 
 class SimpleSlider extends Component {
@@ -13,14 +12,7 @@ class SimpleSlider extends Component {
     };
     return (
       <div className="slider">
-        <Slider {...settings}>
-          <div><img src="https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?auto=format&fit=crop&w=1650&q=80" /></div>
-          <div><img src="" /></div>
-          <div><img src="" /></div>
-          <div><img src="" /></div>
-          <div><img src="" /></div>
-          <div><img src="" /></div>
-        </Slider>
+
       </div>
     );
   }
