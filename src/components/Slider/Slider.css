@@ -1,7 +1,30 @@
-img {
-  width: 100px;
+.slider {
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
 
-.slick-dots li button {
-  background: white;
+.inner-slide {
+  border: 1px solid red;
+  height: 450px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  pointer-events: auto;
+}
+
+.inner-slide:hover {
+  cursor: pointer;
+}
+
+.slide-img {
+  height: 450px;
+  width: 800px;
+  background: blue;
 }

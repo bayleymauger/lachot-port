@@ -2,17 +2,26 @@ import React, {Component} from 'react';
 import './Slider.css';
 
 class SimpleSlider extends Component {
-  render() {
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
-    return (
-      <div className="slider">
 
+  componentDidMount() {
+  }
+
+  handleScroll() {
+    this.refs.activeSlide.style.display = 'none';
+    this.refs.nextSlide.style.dispaly = 'auto';
+  }
+
+  render() {
+    const displayNone = {
+      display: "none",
+    }
+    return (
+      <div className="slider" ref="slider" onScroll={this.handleScroll}>
+        <div className="inner-slide">
+          <div className="active-slide slide-img" ref="activeSlide"></div>
+          <div className="slide-img" ref="nextSlide" style={displayNone}></div>
+          <div className="slide-img" style={displayNone}></div>
+        </div>
       </div>
     );
   }
